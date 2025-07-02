@@ -5,9 +5,10 @@ on:
     - cron: '35 18 * * *'
   push:
     branches: [ "qa" ]
+    # Publish semver tags as releases.
+    tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ "qa" ]
-  tags: [ 'v*.*.*' ]
 
 env:
   REGISTRY: docker.io
